@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ph-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'ph-root',
+	templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'PhotosApp';
+	url = 'https://images.unsplash.com/photo-1613824320065-3d07b66b8d32?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2003&q=80'
 }
