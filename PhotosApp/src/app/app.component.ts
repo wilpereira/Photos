@@ -1,9 +1,18 @@
+
 import { Component } from '@angular/core';
+import { PhotoService } from './pages/photos/service/photo.service';
 
 @Component({
 	selector: 'ph-root',
 	templateUrl: './app.component.html',
 })
 export class AppComponent {
-	url = 'https://images.unsplash.com/photo-1613824320065-3d07b66b8d32?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2003&q=80'
+	photos: Object[] = [];
+
+	constructor(private photoService: PhotoService) {
+		photoService.listFromUser('').subscribe(photos => {
+			console.log(photos);
+			this.photos = photos
+		});
+	}
 }
