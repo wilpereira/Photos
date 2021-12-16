@@ -1,1 +1,10 @@
-<img style="width: 100%;" [src]="url" [alt]="description">
+<figure style="width: 540px; height: 540px; object-fit: fill;">
+	<ul>
+		<ng-container *ngFor="let photo of photos">
+			<li>
+				<strong>{{ photo.name }}</strong>
+				<img [src]="photo.url" [alt]="photo.name" >
+			</li>
+		</ng-container>
+	</ul>
+</figure>
